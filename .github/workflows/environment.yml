@@ -1,0 +1,23 @@
+name: environments workflow
+
+on: [push]
+
+jobs:
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: using powershell
+        shell: pwsh
+        run: Get-Location
+  macos-job:
+    runs-on: macos-latest
+    steps:
+      - name: running in mac
+        shell: bash
+        run: echo Hello world
+  linux-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running in ubunutu
+        shell: bash
+        run: echo Hello world
